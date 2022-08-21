@@ -10,7 +10,6 @@ import numpy as np
 from io import BytesIO
 from PIL import Image
 import tensorflow as tf
-from resizeimage import resizeimage
 
 
 MODEL = tf.keras.models.load_model("C:/Users\91866\Desktop\Great_Learning\DSBA\Weld_Quality_Detection\SavedModel")
@@ -41,7 +40,7 @@ def predict(
 def main():
     st.title('Weld Quality Detection')
     
-    Upload_Image = (st.file_uploader('Take a picture of weld defect'))
+    Upload_Image = st.file_uploader('Take a picture of weld defect')
     
     detection_of_weld_defect = ''
     
@@ -53,15 +52,3 @@ def main():
     
 if __name__ == '__main__':
     main()
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
